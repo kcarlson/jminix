@@ -26,16 +26,20 @@ public class ValueParser
         if( type.equals("java.lang.String") ) {
             return value;
         } else if( type.equals("java.lang.Byte") || type.equals("byte")) {
-            result = new Byte(value);
+            result = Byte.parseByte(value);
         } else if( type.equals("java.lang.Short") || type.equals("short")) {
-            result = new Short(value);
+            result = Short.parseShort(value);
         } else if( type.equals("java.lang.Integer") || type.equals("int")) {
-            result = new Integer(value);
+            result = Integer.parseInt(value);
         } else if( type.equals("java.lang.Long") || type.equals("long")) {
-            result = new Long(value);
+            result = Long.parseLong(value);
         } else if( type.equals("java.lang.Boolean") || type.equals("boolean")) {
-            result = new Boolean(value);
-        }   
+            result = Boolean.parseBoolean(value);
+        } else if( type.equals("java.lang.Float") || type.equals("float")) {
+            result = Float.parseFloat(value);
+        } else if( type.equals("java.lang.Double") || type.equals("double")) {
+            result = Double.parseDouble(value);
+        }  
         
         if(result==null) {
             throw new RuntimeException("Type "+type+" is not supported");
