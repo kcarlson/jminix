@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jminix</groupId>
     <artifactId>jminix</artifactId>
-    <name>jminix</name>
+    <name>Jminix</name>
     <version>1.0.3-SNAPSHOT</version>
     <description>A simple embeddable restful JMX console</description>
     <packaging>jar</packaging>
