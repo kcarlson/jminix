@@ -39,7 +39,9 @@ public class ValueParser
             result = Float.parseFloat(value);
         } else if( type.equals("java.lang.Double") || type.equals("double")) {
             result = Double.parseDouble(value);
-        }  
+        } else if ( type.equals("[Ljava.lang.String;")) {
+            result = value.split(",");
+        }
         
         if(result==null) {
             throw new RuntimeException("Type "+type+" is not supported");
